@@ -35,7 +35,6 @@
 		.kuma1 {width: 52%; background-color: #2196F3;}
 		.Yudachi1 {width: 43%; background-color: #f44336;}
 		.Shigure1 {width: 60%; background-color: #808080;}
-
 		.timeline {
 		position: relative;
 		max-width: 1200px;
@@ -151,11 +150,33 @@
 			width:90%;
 		}
 		img.kuma{
-            width:30%;
+		width:30%;
+		}
+		.accordion {
+		background-color: white;
+		color: #444;
+		cursor: pointer;
+		padding: 18px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+		}
+		.active, .accordion:hover {
+		background-color: #ccc;
+		}
+		.panel {
+		padding: 0 18px;
+		display: none;
+		background-color: white;
+		overflow: hidden;
 		}
 		</style>
 	</head>
 	<body>
+		
 		<div class="poi">
 			<div>
 				<h1>黃鈺程</h1>
@@ -237,11 +258,16 @@
 							<div class="content">
 								<h2>課程經歷</h2>
 								<ul>
-									<li>104下學年國小教學服務</li>
-									<p>因應課程需求，前往國小幫助學生課後輔導作業。</p>
-									<li>106學年度雲端遠距教學</li>
-									<p>依照課程計畫，運用電腦軟體遠距教學育幼院小朋友作業。</p>
-									<li>107學年度畢業專題</li>									
+									<button class="accordion">104下學年國小教學服務</button>
+									<div  class="panel">
+										<p>因應課程需求，前往國小幫助學生課後輔導作業。</p>
+									</div>
+									<button class="accordion">
+									106學年度雲端遠距教學</button>
+									<div  class="panel">
+										<p>依照課程計畫，運用電腦軟體遠距教學育幼院小朋友作業。</p>
+									</div>
+									<button class="accordion">107學年度畢業專題</button>
 								</ul>
 							</div>
 						</div>
@@ -249,5 +275,20 @@
 				</div>
 			</div>
 		</div>
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+		for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.display === "block") {
+		panel.style.display = "none";
+		} else {
+		panel.style.display = "block";
+		}
+		});
+		}
+		</script>
 	</body>
 </html>
