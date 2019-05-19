@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>個人履歷</title>
+		<style>
+			body{
+				font-family: 標楷體;
+				font-size:16pt;
+				background-color: #474e5d;
+			}
+			div.poi{
+			margin:20pt;
+		padding: 20pt;
+		border-color: black;
+		border-width:1pt;
+		border-style:solid;
+		columns: 2 400px;column-rule: silver solid 1px;
+		background-image: url(img/2.jpg);
+			}
+		.container1 {
+		width: 30%;
+		background-color: #ddd;
+		}
+		.skills {
+		text-align: right;
+		padding: 10px;
+		color: white;
+		}
+		.kamo {width: 50%; background-color: #4CAF50;}
+		.kuma {width: 58%; background-color: #2196F3;}
+		.Yudachi {width: 65%; background-color: #f44336;}
+		.Shigure {width: 60%; background-color: #808080;}
+		.kamo1 {width: 59%; background-color: #4CAF50;}
+		.kuma1 {width: 52%; background-color: #2196F3;}
+		.Yudachi1 {width: 43%; background-color: #f44336;}
+		.Shigure1 {width: 60%; background-color: #808080;}
+
+		.timeline {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+		}
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-color: white;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+		}
+		/* Container around content */
+		.container {
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit;
+		width: 40%;
+		}
+		/* The circles on the timeline */
+		.container::after {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		right: -17px;
+		background-color: white;
+		border: 4px solid #FF9F55;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+		}
+		/* Place the container to the left */
+		.left {
+		left: 1%;
+		}
+		/* Place the container to the right */
+		.right {
+		left: 50%;
+		}
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid white;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent white;
+		}
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+		}
+		/* Fix the circle for containers on the right side */
+		.right::after {
+		left: -16px;
+		}
+		/* The actual content */
+		.content {
+		padding: 20px 30px;
+		background-color: white;
+		position: relative;
+		border-radius: 6px;
+		}
+		@media screen and (max-width: 600px) {
+		/* Place the timelime to the left */
+		.timeline::after {
+		left: 31px;
+		}
+		
+		/* Full-width containers */
+		.container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+		}
+		
+		/* Make sure that all arrows are pointing leftwards */
+		.container::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+		}
+		/* Make sure all circles are at the same spot */
+		.left::after, .right::after {
+		left: 15px;
+		}
+		
+		/* Make all right containers behave like the left ones */
+		.right {
+		left: 0%;
+		}
+		}
+		img{
+			width:90%;
+		}
+		img.kuma{
+            width:30%;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="poi">
+			<div>
+				<h1>黃鈺程</h1>
+				<img src="img/d.jpg" class="kuma">
+				<p><i>競誇天下雙無絕，獨立人間第一香</i></p>
+				<ul>
+					<li>港明高中畢業</li>
+					<li>就讀中原大學資管系</li>
+					<li><a href="https://lucky11396.github.io/homework/">個人簡介</a></li>
+					<li><a href="https://www.facebook.com/profile.php?id=100000213780089" class="button">個人臉書</a></li>
+					<li><a href="mailto:jeffery20012000@yahoo.com.tw">信件聯絡</a></li>
+				</ul>
+				<h1>專業技能粗估</h1>
+				<div>
+					<p>前端網頁設計</p>
+					<div class="container1">
+						<p class="skills kamo">50%</p>
+					</div>
+					<p>後端網頁建置</p>
+					<div class="container1">
+						<p class="skills kuma">58%</p>
+					</div>
+					<p>資訊管理整理</p>
+					<div class="container1">
+						<p class="skills Yudachi">65%</p>
+					</div>
+					<p>設計企劃規劃</p>
+					<div class="container1">
+						<p class="skills Shigure">60%</p>
+					</div>
+				</div>
+				<h1>程式熟練程度</h1>
+				<div>
+					<p>Java</p>
+					<div class="container1">
+						<p class="skills kamo1">59%</p>
+					</div>
+					<p>Html</p>
+					<div class="container1">
+						<p class="skills kuma1">52%</p>
+					</div>
+					<p>Java Script</p>
+					<div class="container1">
+						<p class="skills Yudachi1">43%</p>
+					</div>
+					<p>C++</p>
+					<div class="container1">
+						<p class="skills Shigure1">60%</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h1>經歷</h1>
+				<div class="timeline">
+					<div>
+						<div class="container left">
+							<div class="content">
+								<h2>工作經歷</h2>
+								<ul>
+									<li>加油員正職</li>
+									<li>電焊操作員</li>
+									<li><a href="https://www.facebook.com/%E5%AE%A5%E5%85%83%E4%BD%9B%E5%B8%BD-204099056811874/">佛帽銷售</a></li>
+									<p><img src="img/3.jpg"></p>
+								</ul>
+							</div>
+						</div>
+						<div class="container right">
+							<div class="content">
+								<h2>社團經歷</h2>
+								<ul>
+									<li>話劇社社員</li>
+									<li>曾任話劇社書記</li>
+									<li>107學年度期末公演演員</li>
+									<p><img src="img/7329.jpg"></p>
+								</ul>
+							</div>
+						</div>
+						<div class="container left">
+							<div class="content">
+								<h2>課程經歷</h2>
+								<ul>
+									<li>104下學年國小教學服務</li>
+									<p>因應課程需求，前往國小幫助學生課後輔導作業。</p>
+									<li>106學年度雲端遠距教學</li>
+									<p>依照課程計畫，運用電腦軟體遠距教學育幼院小朋友作業。</p>
+									<li>107學年度畢業專題</li>									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
